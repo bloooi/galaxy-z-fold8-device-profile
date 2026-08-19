@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<d:devices
+    xmlns:d="http://schemas.android.com/sdk/devices/10"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <!--
+      Samsung Galaxy Z Fold8 SM-F971 foldable hardware profile.
+
+      Open:   2448 x 1848, 403 dpi, inner display
+      Closed: 1248 x 1972, 428 dpi-equivalent cover display region
+
+      The foldable-region and hinge blocks are intentionally part of the
+      same device definition. Do not split this into separate open/closed
+      devices if the emulator posture controls are required.
+
+      The internal id intentionally uses the Emulator's supported foldable
+      device key so Android 36+ injects its device-state configuration.
+    -->
+    <d:device>
+        <d:name>Samsung Galaxy Z Fold8 SM-F971 — Foldable</d:name>
+        <d:id>pixel_10_pro_fold</d:id>
+        <d:manufacturer>Samsung</d:manufacturer>
+        <d:playstore-enabled>true</d:playstore-enabled>
+
+        <d:hardware>
+            <d:screen>
+                <d:screen-size>xlarge</d:screen-size>
+                <d:diagonal-length>7.6063</d:diagonal-length>
+                <d:pixel-density>403dpi</d:pixel-density>
+                <d:screen-ratio>notlong</d:screen-ratio>
+                <d:dimensions>
+                    <d:x-dimension>2448</d:x-dimension>
+                    <d:y-dimension>1848</d:y-dimension>
+                </d:dimensions>
+                <d:xdpi>403.2467</d:xdpi>
+                <d:ydpi>403.2467</d:ydpi>
+                <d:touch>
+                    <d:multitouch>jazz-hands</d:multitouch>
+                    <d:mechanism>finger</d:mechanism>
+                    <d:screen-type>capacitive</d:screen-type>
+                </d:touch>
+                <d:foldable-region>
+                    <d:x-folded-offset>0</d:x-folded-offset>
+                    <d:y-folded-offset>0</d:y-folded-offset>
+                    <d:x-folded-dimension>1248</d:x-folded-dimension>
+                    <d:y-folded-dimension>1972</d:y-folded-dimension>
+                </d:foldable-region>
+            </d:screen>
+
+            <!-- Vertical inner-display hinge at x = 2448 / 2. -->
+            <d:hinge>
+                <d:count>1</d:count>
+                <d:type>1</d:type>
+                <d:sub-type>1</d:sub-type>
+                <d:ranges>0-180</d:ranges>
+                <d:defaults>180</d:defaults>
+                <d:areas>1224-0-0-1848</d:areas>
+                <d:posture-list>1, 3</d:posture-list>
+                <d:hinge-angles-posture-definitions>0-30, 150-180</d:hinge-angles-posture-definitions>
+            </d:hinge>
+
+            <d:networking>
+                Wifi
+                Bluetooth
+                NFC
+                UWB
+            </d:networking>
+            <d:sensors>
+                Accelerometer
+                Barometer
+                Compass
+                GPS
+                Gyroscope
+                LightSensor
+                ProximitySensor
+                Fingerprint
+            </d:sensors>
+            <d:mic>true</d:mic>
+            <d:camera>
+                <d:location>back</d:location>
+                <d:autofocus>true</d:autofocus>
+                <d:flash>true</d:flash>
+            </d:camera>
+            <d:camera>
+                <d:location>front</d:location>
+                <d:autofocus>false</d:autofocus>
+                <d:flash>false</d:flash>
+            </d:camera>
+            <d:keyboard>nokeys</d:keyboard>
+            <d:nav>nonav</d:nav>
+            <d:ram unit="GiB">12</d:ram>
+            <d:buttons>soft</d:buttons>
+            <d:internal-storage unit="GiB">256</d:internal-storage>
+            <d:cpu>Snapdragon 8 Elite Gen 5 Mobile Platform for Galaxy</d:cpu>
+            <d:gpu>Generic Adreno GPU</d:gpu>
+            <d:dock> </d:dock>
+            <d:power-type>battery</d:power-type>
+        </d:hardware>
+
+        <d:software>
+            <d:api-level>34-</d:api-level>
+            <d:live-wallpaper-support>true</d:live-wallpaper-support>
+            <d:bluetooth-profiles> </d:bluetooth-profiles>
+            <d:gl-version>3.2</d:gl-version>
+            <d:gl-extensions> </d:gl-extensions>
+            <d:status-bar>true</d:status-bar>
+        </d:software>
+
+        <d:state name="Landscape" default="true">
+            <d:description>Open inner display in landscape orientation</d:description>
+            <d:screen-orientation>land</d:screen-orientation>
+            <d:keyboard-state>keyssoft</d:keyboard-state>
+            <d:nav-state>nonav</d:nav-state>
+        </d:state>
+        <d:state name="Portrait">
+            <d:description>Open inner display in portrait orientation</d:description>
+            <d:screen-orientation>port</d:screen-orientation>
+            <d:keyboard-state>keyssoft</d:keyboard-state>
+            <d:nav-state>nonav</d:nav-state>
+        </d:state>
+    </d:device>
+</d:devices>
